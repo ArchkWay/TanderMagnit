@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="6dp"
+    android:shadowColor="@color/cardview_dark_background"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp">
+
+        <TextView
+            android:id="@+id/tvCountryIt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Россия"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCityIt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Москва"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tvCountryIt"
+            />
+
+        <TextView
+            android:id="@+id/tvStationIt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Казанский вокзал"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tvCityIt"
+            />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

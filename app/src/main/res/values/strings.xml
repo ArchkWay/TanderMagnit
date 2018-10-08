@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ТандерМагнит</string>
+    <string name="error">Ошибка</string>
+    <string name="Back">Назад</string>
+    <string name="search">Поиск</string>
+    <string name="amount">AMOUNT</string>
+    <string name="menu">Меню</string>
+    <string name="shedule">Расписание станций</string>
+    <string name="about">Тестовое приложение для компании ООО "Тандер"©</string>
+</resources>

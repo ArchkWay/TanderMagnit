@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity"
+    >
+
+    <DatePicker
+        android:id="@+id/dpDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:yearListSelectorColor="@color/colorWhite"
+        android:calendarTextColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/tvToHead"
+        android:visibility="gone"
+        tools:targetApi="lollipop">
+
+    </DatePicker>
+
+    <Button
+        android:id="@+id/buttonDateChoose"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/colorWhite"
+        android:onClick="buttonClickDateChoose"
+        android:text="ОК"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/dpDatePicker"
+        app:layout_constraintRight_toRightOf="@+id/dpDatePicker"
+        />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="@color/colorWhite"
+        android:text="02.10.2018"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvFromHead"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Отправка"
+        android:textColor="@color/colorWhite"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvToHead"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        />
+
+    <TextView
+        android:id="@+id/tvToHead"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:text="Прибытие"
+        android:textColor="@color/colorWhite"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvFromHead"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvFrom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tvFromHead"
+        app:layout_constraintTop_toBottomOf="@id/tvFromHead"
+        app:layout_constraintRight_toRightOf="@id/tvFromHead"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tvToHead"
+        app:layout_constraintTop_toBottomOf="@id/tvToHead"
+        app:layout_constraintRight_toRightOf="@id/tvToHead"
+        />
+
+    <ImageView
+        android:id="@+id/ivSearchFrom"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_margin="8dp"
+        app:srcCompat="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFromHead"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/ivSearchTo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="8dp"
+        app:srcCompat="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/tvToHead"
+        app:layout_constraintRight_toRightOf="@+id/tvToHead"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/etSearchFrom"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvToHead"
+        app:layout_constraintLeft_toLeftOf="@+id/rvFrom"
+        />
+    <EditText
+        android:id="@+id/etSearchTo"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="19dp"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvToHead"
+        app:layout_constraintLeft_toRightOf="@id/rvFrom"
+        />
+
+  </android.support.constraint.ConstraintLayout>
